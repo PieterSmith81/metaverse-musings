@@ -4,7 +4,7 @@ A responsive blog website about the Metaverse, drawing inspiration from Google's
 
 ## Live Website
 
-### Coming Soon!
+### https://pietersmith81.github.io/metaverse-musings
 
 ## Tech Stack
 
