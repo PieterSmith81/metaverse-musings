@@ -1,0 +1,69 @@
+/*
+  Using the CSS variables (part of CSS custom properties) as documented here:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+
+  Theme colors obtained from Google's Meterial Design 3 Theme Builder here:
+  https://material-foundation.github.io/material-theme-builder/#/custom
+
+  Basic implementation of CSS variables:
+    In CSS, you can declare your variables in the root block:
+    :root {
+    --main-bg-color: #1596A7;
+    }
+
+    And implement it using with the var() method:
+    .panel-header {
+        background: var(--main-bg-color);
+        color: ...
+    }
+*/
+
+:root {
+  --primary: #454dd2;
+  --on-primary: #ffffff;
+  --primary-container: #dfe0ff;
+  --on-primary-container: #00006f;
+  --secondary: #5c5d72;
+  --on-secondary: #ffffff;
+  --secondary-container: #e1e0fa;
+  --on-secondary-container: #191a2b;
+  --tertiary: #79536b;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #ffd7ef;
+  --on-tertiary-container: #2e1126;
+  --error: #ba1b1b;
+  --on-error: #ffffff;
+  --error-container: #ffdad4;
+  --on-error-container: #410001;
+  --outline: #777680;
+  --background: #fffbff;
+  --on-background: #1b1b1f;
+  --surface: #fffbff;
+  --on-surface: #1b1b1f;
+  --surface-variant: #e4e1ec;
+  --on-surface-variant: #46464f;
+  --inverse-surface: #313034;
+  --inverse-on-surface: #f3eff4;
+
+  /* My additions below */
+  --title-text: #dfe0ff;
+  --title-text-shadow: #1b1b1f;
+
+  /*
+    CSS filters below are used to dynamically change the svg image color.
+    see: https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element
+    and: "Target color" field at: https://codepen.io/sosuke/pen/Pjoqqp
+  */
+  --header-icon-filter: invert(83%) sepia(17%) saturate(879%) hue-rotate(198deg)
+    brightness(105%) contrast(103%); /* Target color: --primary-container */
+  --header-icon-filter-hover: invert(40%) sepia(17%) saturate(879%)
+    hue-rotate(198deg) brightness(105%) contrast(103%); /* Target color: --primary-container with a 40% invert value */
+  --nav-icon-filter: invert(9%) sepia(36%) saturate(1370%) hue-rotate(269deg)
+    brightness(88%) contrast(98%); /* Target color: --on-tertiary-container */
+  --nav-icon-filter-hover: invert(78%) sepia(21%) saturate(288%)
+    hue-rotate(281deg) brightness(108%) contrast(103%); /* Target color: --tertiary-container */
+  --content-image-filter: grayscale(100%) invert(0%) sepia(100%) saturate(500%)
+    hue-rotate(198deg) brightness(120%) contrast(100%); /* Target color: custom */
+  --content-image-filter-hover: grayscale(100%) invert(0%) sepia(100%)
+    saturate(1000%) hue-rotate(210deg) brightness(100%) contrast(100%); /* Target color: custom */
+}

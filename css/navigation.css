@@ -1,0 +1,65 @@
+/* Navigation drawer CSS styles */
+.nav-container {
+  grid-area: navigation;
+}
+
+.nav-drawer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 2px;
+  padding-bottom: 16px;
+  border-radius: 28px;
+  background: var(--tertiary-container);
+  color: var(--on-tertiary-container);
+  opacity: 90%;
+}
+
+.nav-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--on-tertiary-container);
+  height: 56px;
+}
+
+.nav-row:hover {
+  border-radius: 28px;
+  background-color: var(--primary);
+  color: var(--tertiary-container);
+}
+
+.nav-row-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 56px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+}
+
+.nav-row-icon {
+  display: flex;
+  flex-direction: row;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+  margin-right: 12px;
+}
+
+.nav-icon-theme {
+  filter: var(--nav-icon-filter);
+}
+
+.nav-row:hover .nav-icon-theme {
+  filter: var(--nav-icon-filter-hover);
+}
+
+.nav-row-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 24px;
+  margin-right: 24px;
+}

@@ -1,0 +1,74 @@
+/* Header CSS styles */
+.header-container {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 64px;
+}
+
+.header-bottom {
+  display: flex;
+  flex-direction: column;
+  height: 144px; /* calculation: header height of 240px - header top height of 64px - header bottom padding of 32px (16px x 2 as specified in the line below) = 144px */
+  padding: 16px;
+  justify-content: flex-end;
+}
+
+.app-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-bar-icon {
+  display: flex;
+  flex-direction: row;
+  width: 24px;
+  height: 24px;
+  margin-left: 24px; /* This sets the spacing between the top app bar icons */
+}
+
+.app-bar-icon-theme {
+  filter: var(--header-icon-filter);
+}
+
+.app-bar-icon-theme:hover {
+  filter: var(--header-icon-filter-hover);
+}
+
+#app-bar-searchbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 96px;
+  height: 24px;
+  margin-left: 1px; /* This sets the spacing between the top bar search icon and search box */
+  margin-right: 16px;
+  color: var(--title-text);
+  border-bottom: 1px solid var(--title-text);
+}
+
+#app-bar-searchboxtext {
+  opacity: 50%;
+}
+
+#header-title {
+  color: var(--title-text);
+  font-family: "Orbitron", sans-serif;
+  font-size: 38px;
+  text-shadow: 2px 2px var(--title-text-shadow);
+}
+
+#header-subtitle {
+  color: var(--title-text);
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  text-shadow: 1px 1px var(--title-text-shadow);
+}

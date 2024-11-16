@@ -1,0 +1,81 @@
+/*
+  Content CSS styles.
+  Also see related @media responsive layout query for wider screens at the bottom of this stylesheet.
+*/
+.index-content-container {
+  grid-area: main-content;
+}
+
+.index-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 336px;
+  height: 336px;
+  margin: 8px;
+  border-radius: 28px;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  opacity: 90%;
+}
+
+.card:hover {
+  background-color: var(--primary);
+  color: var(--primary-container);
+}
+
+.card-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  width: 336px;
+  height: 256px;
+  filter: var(--content-image-filter);
+  /*
+    CSS properties below fixes blurry images when scaling down image size using CSS.
+    Taken from: https://tutorialsclass.com/code/css-code-to-fix-blurry-image-when-scaling-down/
+  */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+}
+
+.card:hover .card-image {
+  filter: var(--content-image-filter-hover);
+}
+
+.card-title {
+  display: flex;
+  flex-direction: row;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+}
+
+.card-subtitle {
+  display: flex;
+  flex-direction: row;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  font-size: 12px;
+}
+
+/* Responsive page layout for wider screens, i.e. for tables and monitors */
+@media (min-width: 737px) {
+  .index-content-container {
+    padding-top: 64px;
+  }
+}

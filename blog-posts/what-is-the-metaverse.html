@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head and metadata -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Metaverse Musings</title>
+    <meta name="description" content="Metaverse Musings Blog" />
+    <meta name="author" content="Pieter Smith" />
+    <meta
+      name="keywords"
+      content="Metaverse, Metaverse blog, Metaverse projects, Virtual reality, Augmented reality, NFT, NFTs"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- For details on what this viewport meta tag and its related values do, see https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="theme-color" content="#100b33" />
+    <!-- Sets the color of the header bar and address bar in Android mobile browsers -->
+
+    <!-- Use fonts from Google Fonts - https://fonts.google.com/ -->
+    <!-- Roboto for all body and element text, Orbitron for titles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My external style sheets -->
+    <link rel="stylesheet" href="../css/theme-dark.css" />
+    <link rel="stylesheet" href="../css/theme-light.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page container grid -->
+    <div class="blog-container">
+      <!-- Header -->
+      <div class="header-container box1">
+        <!-- Header top -->
+        <div class="header-top box2">
+          <!-- Top application bar -->
+          <div class="app-bar box3">
+            <!-- About icon -->
+            <a href="../about.html">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="../images/icons/about.svg"
+                  title="About the author"
+                  alt="About the author"
+                />
+              </div>
+            </a>
+
+            <!-- Dark mode icon -->
+            <a href="javascript:void(0);">
+              <!-- Link to nothing -->
+              <div id="dark-mode" class="app-bar-icon box4">
+                <img
+                  id="dark-mode-icon"
+                  class="app-bar-icon-theme icon24px"
+                  src="../images/icons/dark-mode.svg"
+                  title="Dark / light mode"
+                  alt="Dark / light mode"
+                />
+              </div>
+            </a>
+
+            <script>
+              // The only bit of JavaScript I used - really wanted the dark/light theme button to work
+              document.getElementById("dark-mode").onclick = function () {
+                document.styleSheets[2].disabled =
+                  !document.styleSheets[2].disabled; // Disable or enabled the light theme stylesheet (depending on if it's already enabled or not)
+
+                // Change the dark/light mode icon accordingly
+                if (
+                  document
+                    .getElementById("dark-mode-icon")
+                    .src.includes("dark-mode.svg")
+                ) {
+                  document.getElementById("dark-mode-icon").src =
+                    "../images/icons/light-mode.svg";
+                } else {
+                  document.getElementById("dark-mode-icon").src =
+                    "../images/icons/dark-mode.svg";
+                }
+              };
+            </script>
+
+            <!-- Search icon -->
+            <a href="#">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="../images/icons/search.svg"
+                  title="Search"
+                  alt="Search"
+                />
+              </div>
+            </a>
+
+            <!-- Dummy search box -->
+            <div id="app-bar-searchbox" class="box4">
+              <span id="app-bar-searchboxtext">Search</span>
+            </div>
+          </div>
+        </div>
+        <!-- Header bottom -->
+        <div class="header-bottom box2">
+          <a id="header-title" class="box3" href="../index.html"
+            >Metaverse Musings</a
+          >
+          <a id="header-subtitle" class="box3" href="../index.html"
+            ><em>a blog about all things Metaverse</em></a
+          >
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="blog-content-container box1">
+        <div class="blog-content-wrapper box2">
+          <article>
+            <!-- Main title -->
+            <br />
+            <h1 class="box3">What is the Metaverse?</h1>
+            <br />
+
+            <!-- Author grid -->
+            <div class="author-grid box3">
+              <img
+                class="author-image-small box4"
+                src="../images/author.png"
+                title="Pieter Smith"
+                alt="Author"
+              />
+              <h3 class="author-name box4">Author: Pieter Smith</h3>
+              <h4 class="published-date box4">Monday, 9 May 2022</h4>
+            </div>
+
+            <!-- The new buzzword -->
+            <section id="the-new-buzzword">
+              <br />
+              <br />
+              <h2>The new buzzword</h2>
+              <p>
+                Have you ever been confused by conversations around the
+                Metaverse? You are not alone. If you have been frustrated by the
+                conversations, I can assure you that you are not alone, too.
+              </p>
+              <p>
+                Ever since the spike in interest during 2021, thousands of
+                companies and pseudo-professionals ruffled through their
+                websites and strapped the word to as many of their marketing
+                materials as possible, capitalising on an explosion of interest.
+                Suddenly, companies that hosted private virtual worlds are
+                building towards a Metaverse, or AR companies are mapping out
+                the world to build it out. A comparable situation happened in
+                2017 when Bitcoin exploded in value and "blockchain" was bolted
+                on the side of new start-ups seeking venture funding.
+              </p>
+              <p>
+                Not all of these companies are providing substantial
+                contributions to the discussions. The worst cases are companies
+                that see they have a private world, and label it as a Metaverse.
+                The conversation will become nuanced over 2022 and beyond, but
+                currently, it is a rush of companies identifying a new business
+                opportunity.
+              </p>
+            </section>
+
+            <!-- Divider image -->
+            <figure>
+              <img
+                class="blog-image-stretched box3"
+                src="../images/card-images/what-is-the-metaverse.webp"
+                title="What is the Metaverse?"
+                alt="What is the Metaverse?"
+              />
+              <figcaption class="blog-caption">
+                <u
+                  ><em
+                    >"Metaverse" is the buzzword of the moment, but what is it
+                    really?</em
+                  ></u
+                >
+              </figcaption>
+            </figure>
+            <br />
+
+            <!-- Defining the Metaverse -->
+            <section id="defining-the-metaverse">
+              <br />
+              <h2>Defining the Metaverse</h2>
+              <p>
+                If you ask any of these companies what the Metaverse is, you
+                will get a range of different answers. Some say it is a super
+                Internet where people can access experiences, zipping through
+                the Metaverse and going surfing, climbing, socialising and more.
+                Others say it is a wholly social experience, where friends can
+                hang out and conduct activities together. Still, others see it
+                as a layer of reality, not a separate one: an overlay of
+                information as people walk around the world. The madness of the
+                conversations stems from the myriad of conversations that
+                clutter social and mainstream media, obfuscating the view with a
+                pyramid of poor takes.
+              </p>
+              <p>
+                My favourite definition comes from Matthew Ball, an established
+                essayist who has been following the space more than the
+                futurists in Silicon Valley bars:
+                <em
+                  ><q
+                    >The Metaverse is an expansive network of persistent,
+                    real-time rendered 3D worlds and simulations that support
+                    continuity of identity, objects, history, payments, and
+                    entitlements, and can be experienced synchronously by an
+                    effectively unlimited number of users, each with an
+                    individual sense of presence.</q
+                  ></em
+                >
+                A wide definition that covers many different technologies -
+                hence the confusion on what the Metaverse will look like.
+              </p>
+              <p><em>Article continues...</em></p>
+            </section>
+
+            <!-- Credits -->
+            <section id="extract-credits">
+              <br />
+              <h2>Credits</h2>
+              <p>
+                <em
+                  >Extract copied from:
+                  <a
+                    class="blog-link"
+                    href="https://www.amazon.com/Metaverse-Professional-augmented-immersive-technologies/dp/B09RGSGY13"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >The Metaverse: A Professional Guide - by Tom Ffiske</a
+                  >. Credit and thank you to the original author.</em
+                >
+              </p>
+            </section>
+          </article>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-container box1">
+        <div id="footer-text" class="box2">Copyright © 2022 - Pieter Smith</div>
+      </div>
+    </div>
+  </body>
+</html>

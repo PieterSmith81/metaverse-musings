@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head and metadata -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Metaverse Musings</title>
+    <meta name="description" content="Metaverse Musings Blog" />
+    <meta name="author" content="Pieter Smith" />
+    <meta
+      name="keywords"
+      content="Metaverse, Metaverse blog, Metaverse projects, Virtual reality, Augmented reality, NFT, NFTs"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- For details on what this viewport meta tag and its related values do, see https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="theme-color" content="#100b33" />
+    <!-- Sets the color of the header bar and address bar in Android mobile browsers -->
+
+    <!-- Use fonts from Google Fonts - https://fonts.google.com/ -->
+    <!-- Roboto for all body and element text, Orbitron for titles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My external style sheets -->
+    <link rel="stylesheet" href="css/theme-dark.css" />
+    <link rel="stylesheet" href="css/theme-light.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page container grid -->
+    <div class="blog-container">
+      <!-- Header -->
+      <div class="header-container box1">
+        <!-- Header top -->
+        <div class="header-top box2">
+          <!-- Top application bar -->
+          <div class="app-bar box3">
+            <!-- About icon -->
+            <a href="about.html">
+              <!-- Link to nothing -->
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/about.svg"
+                  title="About the author"
+                  alt="About the author"
+                />
+              </div>
+            </a>
+
+            <!-- Dark mode icon -->
+            <a href="javascript:void(0);">
+              <!-- Link to nothing -->
+              <div id="dark-mode" class="app-bar-icon box4">
+                <img
+                  id="dark-mode-icon"
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/dark-mode.svg"
+                  title="Dark / light mode"
+                  alt="Dark / light mode"
+                />
+              </div>
+            </a>
+
+            <script>
+              // The only bit of JavaScript I used - really wanted the dark/light theme button to work
+              document.getElementById("dark-mode").onclick = function () {
+                document.styleSheets[2].disabled =
+                  !document.styleSheets[2].disabled; // Disable or enabled the light theme stylesheet (depending on if it's already enabled or not)
+
+                // Change the dark/light mode icon accordingly
+                if (
+                  document
+                    .getElementById("dark-mode-icon")
+                    .src.includes("dark-mode.svg")
+                ) {
+                  document.getElementById("dark-mode-icon").src =
+                    "images/icons/light-mode.svg";
+                } else {
+                  document.getElementById("dark-mode-icon").src =
+                    "images/icons/dark-mode.svg";
+                }
+              };
+            </script>
+
+            <!-- Search icon -->
+            <a href="#">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/search.svg"
+                  title="Search"
+                  alt="Search"
+                />
+              </div>
+            </a>
+
+            <!-- Dummy search box -->
+            <div id="app-bar-searchbox" class="box4">
+              <span id="app-bar-searchboxtext">Search</span>
+            </div>
+          </div>
+        </div>
+        <!-- Header bottom -->
+        <div class="header-bottom box2">
+          <a id="header-title" class="box3" href="index.html"
+            >Metaverse Musings</a
+          >
+          <a id="header-subtitle" class="box3" href="index.html"
+            ><em>a blog about all things Metaverse</em></a
+          >
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="blog-content-container box1">
+        <div class="blog-content-wrapper box2">
+          <article>
+            <!-- Main title -->
+            <br />
+            <h1 class="box3">About the author</h1>
+            <br />
+
+            <!-- Author image -->
+            <figure>
+              <img
+                class="author-image-large box3"
+                src="images/author.png"
+                title="Pieter Smith"
+                alt="Author"
+              />
+              <figcaption class="blog-caption">
+                <h1><em>Pieter Smith</em></h1>
+              </figcaption>
+            </figure>
+            <br />
+
+            <!-- Author info -->
+            <section id="author-info">
+              <br />
+              <h2>Author info</h2>
+              <ul>
+                <li>Name: <strong>Pieter Smith</strong></li>
+              </ul>
+            </section>
+
+            <!-- Social media -->
+            <section id="social-media">
+              <br />
+              <h2>Socials</h2>
+              <ul>
+                <li>
+                  <a
+                    class="blog-link"
+                    href="https://www.linkedin.com/in/pietersmith81"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="blog-link"
+                    href="https://github.com/PieterSmith81"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <!-- Bio -->
+            <section id="author-bio">
+              <br />
+              <h2>Bio</h2>
+              <p>
+                With 23 years of experience in the software industry, I have
+                worn many hats - but right now, I am loving my journey into
+                full-stack web development.
+              </p>
+              <p>
+                My transition from ERP systems consulting to web development is
+                fueled by a passion for solving complex problems, embracing new
+                technologies, and rekindling my love for computer programming. I
+                am dedicated to cultivating collaboration and empowering others
+                through meaningful support. I firmly believe that "you win as a
+                team and you lose as a team!"
+              </p>
+              <p>
+                I am also a huge fan of all things Crypto, DeFi, NFT, Metaverse,
+                Blockchain, and Web3.
+              </p>
+            </section>
+
+            <!-- Interests -->
+            <section id="author-interests">
+              <br />
+              <h2>Interests</h2>
+              <ul class="ul-two-columns">
+                <li>Family life</li>
+                <li>Computer programming</li>
+                <li>Cryptocurrency</li>
+                <li>DeFi</li>
+                <li>NFTs</li>
+                <li>The Metaverse</li>
+                <li>Virtual reality</li>
+                <li>Computer security</li>
+                <li>Gadgets and technology</li>
+                <li>Movies (especially sci-fi, fantasy, and kung fu movies)</li>
+                <li>Reading (mostly sci-fi and fantasy)</li>
+                <li>
+                  Computer gaming (I don't have much time for this nowadays)
+                </li>
+                <li>Golf</li>
+                <li>Cars</li>
+                <li>Coffee, lots and lots of coffee</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-container box1">
+        <div id="footer-text" class="box2">Copyright © 2022 - Pieter Smith</div>
+      </div>
+    </div>
+  </body>
+</html>

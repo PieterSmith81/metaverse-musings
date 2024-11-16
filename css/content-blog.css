@@ -1,0 +1,178 @@
+.blog-content-container {
+  grid-area: main-content;
+}
+
+.blog-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 65px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+h1 {
+  margin: 0px;
+  color: var(--primary);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+h2 {
+  margin: 0px;
+  color: var(--secondary);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0px;
+  color: var(--secondary);
+  font-size: 16px;
+}
+
+h4 {
+  margin: 0px;
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+ul {
+  color: var(--secondary);
+}
+
+.ul-two-columns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.author-grid {
+  display: grid;
+  grid-template-columns: 64px auto;
+  grid-template-rows: 36px 28px;
+  grid-template-areas:
+    "author-image author-name"
+    "author-image published-date";
+}
+
+.author-image-small {
+  grid-area: author-image;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  opacity: 90%;
+  filter: var(--content-image-filter);
+  /*
+    CSS properties below fixes blurry images when scaling down image size using CSS.
+    Taken from: https://tutorialsclass.com/code/css-code-to-fix-blurry-image-when-scaling-down/
+  */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+}
+
+.author-image-large {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  width: 328px;
+  height: 328px;
+  border-radius: 164px;
+  opacity: 90%;
+  filter: var(--content-image-filter);
+  /* CSS properties below fixes blurry images */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+}
+
+.author-name {
+  grid-area: author-name;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-wrap: nowrap;
+}
+
+.published-date {
+  grid-area: published-date;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-wrap: nowrap;
+}
+
+.blog-image-stretched {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  width: 95%;
+  max-height: 360px; /* shrinks the image on smaller screens/viewports */
+  border-radius: 28px;
+  opacity: 90%;
+  filter: var(--content-image-filter);
+  /* CSS properties below fixes blurry images */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+}
+
+.blog-image-nofilter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  max-width: 100%; /* shrinks the image on smaller screens/viewports */
+  /* CSS properties below fixes blurry images */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+}
+
+.blog-image-small {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  width: 350px;
+  max-width: 100%; /* shrinks the image on smaller screens/viewports */
+  border-radius: 28px;
+  opacity: 90%;
+  filter: var(--content-image-filter);
+  /* CSS properties below fixes blurry images */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+}
+
+.blog-caption {
+  color: var(--secondary);
+  text-align: center;
+}
+
+.blog-link {
+  color: var(--primary);
+}

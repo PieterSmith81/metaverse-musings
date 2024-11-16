@@ -1,0 +1,20 @@
+/* Footer CSS styles */
+.footer-container {
+  grid-area: footer;
+  background-image: url("../images/background-gradient.jpg");
+  background-size: 32px;
+  background-repeat: repeat-x;
+  height: 32px;
+}
+
+#footer-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  color: var(--title-text);
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  text-shadow: 1px 1px var(--title-text-shadow);
+}

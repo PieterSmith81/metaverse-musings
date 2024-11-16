@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head and metadata -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Metaverse Musings</title>
+    <meta
+      name="description"
+      content="A responsive blog website about the Metaverse"
+    />
+    <meta name="author" content="Pieter Smith" />
+    <meta
+      name="keywords"
+      content="Metaverse, Metaverse blog, Metaverse projects, Virtual reality, Augmented reality, NFT, NFTs"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- For details on what this viewport meta tag and its related values do, see https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="theme-color" content="#100b33" />
+    <!-- Sets the color of the header bar and address bar in Android mobile browsers -->
+
+    <!-- Use fonts from Google Fonts - https://fonts.google.com/ -->
+    <!-- Roboto for all body and element text, Orbitron for titles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My external style sheets -->
+    <link rel="stylesheet" href="css/theme-dark.css" />
+    <link rel="stylesheet" href="css/theme-light.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page container grid -->
+    <div class="index-container">
+      <!-- Header -->
+      <div class="header-container box1">
+        <!-- Header top -->
+        <div class="header-top box2">
+          <!-- Top application bar -->
+          <div class="app-bar box3">
+            <!-- About icon -->
+            <a href="about.html">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/about.svg"
+                  title="About the author"
+                  alt="About the author"
+                />
+              </div>
+            </a>
+
+            <!-- Dark mode icon -->
+            <a href="javascript:void(0);">
+              <!-- Link to nothing -->
+              <div id="dark-mode" class="app-bar-icon box4">
+                <img
+                  id="dark-mode-icon"
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/dark-mode.svg"
+                  title="Dark / light mode"
+                  alt="Dark / light mode"
+                />
+              </div>
+            </a>
+
+            <script>
+              // The only bit of JavaScript I used - really wanted the dark/light theme button to work
+              document.getElementById("dark-mode").onclick = function () {
+                document.styleSheets[2].disabled =
+                  !document.styleSheets[2].disabled; // Disable or enabled the light theme stylesheet (depending on if it's already enabled or not)
+
+                // Change the dark/light mode icon accordingly
+                if (
+                  document
+                    .getElementById("dark-mode-icon")
+                    .src.includes("dark-mode.svg")
+                ) {
+                  document.getElementById("dark-mode-icon").src =
+                    "images/icons/light-mode.svg";
+                } else {
+                  document.getElementById("dark-mode-icon").src =
+                    "images/icons/dark-mode.svg";
+                }
+              };
+            </script>
+
+            <!-- Search icon -->
+            <a href="#">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/search.svg"
+                  title="Search"
+                  alt="Search"
+                />
+              </div>
+            </a>
+
+            <!-- Dummy search box -->
+            <div id="app-bar-searchbox" class="box4">
+              <span id="app-bar-searchboxtext">Search</span>
+            </div>
+          </div>
+        </div>
+        <!-- Header bottom -->
+        <div class="header-bottom box2">
+          <a id="header-title" class="box3" href="index.html"
+            >Metaverse Musings</a
+          >
+          <a id="header-subtitle" class="box3" href="index.html"
+            ><em>a blog about all things Metaverse</em></a
+          >
+        </div>
+      </div>
+
+      <!-- Navigation drawer -->
+      <div class="nav-container box1">
+        <div class="nav-drawer">
+          <!-- Blog posts by category -->
+          <div class="nav-row-title box3">Blog posts by category</div>
+
+          <!-- Note, the navigation drawer only contains dummy links for now, apart from the "Design system" link" -->
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/metaverse.svg"
+                  alt="Metaverse articles"
+                />
+              </div>
+              <div class="nav-row-text box4">Metaverse articles</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/nfts.svg"
+                  alt="NFTs and ownership"
+                />
+              </div>
+              <div class="nav-row-text box4">NFTs and ownership</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/vr.svg"
+                  alt="Virtual reality (VR)"
+                />
+              </div>
+              <div class="nav-row-text box4">Virtual reality (VR)</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/ar.svg"
+                  alt="Augmented reality (AR)"
+                />
+              </div>
+              <div class="nav-row-text box4">Augmented reality (AR)</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/xr.svg"
+                  alt="Extended reality (AR)"
+                />
+              </div>
+              <div class="nav-row-text box4">Extended reality (XR)</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/projects.svg"
+                  alt="Metaverse projects"
+                />
+              </div>
+              <div class="nav-row-text box4">Metaverse projects</div>
+            </div>
+          </a>
+
+          <!-- Blog posts by date -->
+          <div class="nav-row-title box3">Blog posts by date</div>
+
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/current-month.svg"
+                  alt="Current month"
+                />
+              </div>
+              <div class="nav-row-text box4">Current month</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/previous-month.svg"
+                  alt="Previous month"
+                />
+              </div>
+              <div class="nav-row-text box4">Previous month</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/older-month.svg"
+                  alt="Older"
+                />
+              </div>
+              <div class="nav-row-text box4">Older</div>
+            </div>
+          </a>
+
+          <!-- Design -->
+          <div class="nav-row-title box3">Design</div>
+
+          <a href="design-system.html">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/design-system.svg"
+                  alt="Design system"
+                />
+              </div>
+              <div class="nav-row-text box4">Design system</div>
+            </div>
+          </a>
+
+          <!-- Follow us -->
+          <div class="nav-row-title box3">Follow us</div>
+
+          <a href="#">
+            <div class="nav-row box3">
+              <div class="nav-row-icon box4">
+                <img
+                  class="nav-icon-theme icon24px"
+                  src="images/icons/subscribe.svg"
+                  alt="Subscribe"
+                />
+              </div>
+              <div class="nav-row-text box4"><strong>Subscribe</strong></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="index-content-container box1">
+        <div class="index-content-wrapper box2">
+          <!-- Content cards -->
+          <a href="blog-posts/what-is-the-metaverse.html">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/what-is-the-metaverse.webp"
+                  alt="What is the Metaverse?"
+                />
+              </div>
+              <div class="card-title box4">What is the Metaverse?</div>
+              <div class="card-subtitle box4">Monday, 9 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/does-the-metaverse-exist-today.jpg"
+                  alt="Does the Metaverse exist today?"
+                />
+              </div>
+              <div class="card-title box4">Does the Metaverse exist today?</div>
+              <div class="card-subtitle box4">Sunday, 8 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/when-will-the-metaverse-be-here.jpg"
+                  alt="When will the Metaverse be here?"
+                />
+              </div>
+              <div class="card-title box4">
+                When will the Metaverse be here?
+              </div>
+              <div class="card-subtitle box4">Saturday, 7 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/accessing-the-metaverse.jpg"
+                  alt="Accessing the Metaverse"
+                />
+              </div>
+              <div class="card-title box4">Accessing the Metaverse</div>
+              <div class="card-subtitle box4">Friday, 6 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/metaverse-projects.webp"
+                  alt="Metaverse projects"
+                />
+              </div>
+              <div class="card-title box4">Metaverse projects</div>
+              <div class="card-subtitle box4">Thursday, 5 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/nfts-and-ownership-in-the-metaverse.webp"
+                  alt="NFTs and ownership in the Metaverse"
+                />
+              </div>
+              <div class="card-title box4">
+                NFTs and ownership in the Metaverse
+              </div>
+              <div class="card-subtitle box4">Wednesday, 4 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/virtual-reality-vs-augmented-reality.webp"
+                  alt="Virtual reality vs augmented reality"
+                />
+              </div>
+              <div class="card-title box4">
+                Virtual reality vs augmented reality
+              </div>
+              <div class="card-subtitle box4">Tuesday, 3 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/the-future-of-the-metaverse.jpg"
+                  alt="The future of the metaverse"
+                />
+              </div>
+              <div class="card-title box4">The future of the metaverse</div>
+              <div class="card-subtitle box4">Monday, 2 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/gaming-in-the-metaverse.jpg"
+                  alt="Gaming in the Metaverse"
+                />
+              </div>
+              <div class="card-title box4">Gaming in the Metaverse</div>
+              <div class="card-subtitle box4">Sunday, 1 May 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/working-in-the-metaverse.webp"
+                  alt="Working in the Metaverse"
+                />
+              </div>
+              <div class="card-title box4">Working in the Metaverse</div>
+              <div class="card-subtitle box4">Saturday, 30 April 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/doing-business-in-the-metaverse.jpg"
+                  alt="Doing business in the Metaverse"
+                />
+              </div>
+              <div class="card-title box4">Doing business in the Metaverse</div>
+              <div class="card-subtitle box4">Friday, 29 April 2022</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="card box3">
+              <div class="box4">
+                <img
+                  class="card-image"
+                  src="images/card-images/education-in-the-metaverse.jpg"
+                  alt="Education in the Metaverse"
+                />
+              </div>
+              <div class="card-title box4">Education in the Metaverse</div>
+              <div class="card-subtitle box4">Thursday, 28 April 2022</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-container box1">
+        <div id="footer-text" class="box2">Copyright © 2022 - Pieter Smith</div>
+      </div>
+    </div>
+  </body>
+</html>

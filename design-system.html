@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head and metadata -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Metaverse Musings</title>
+    <meta name="description" content="Metaverse Musings Blog" />
+    <meta name="author" content="Pieter Smith" />
+    <meta
+      name="keywords"
+      content="Metaverse, Metaverse blog, Metaverse projects, Virtual reality, Augmented reality, NFT, NFTs"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- For details on what this viewport meta tag and its related values do, see https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="theme-color" content="#100b33" />
+    <!-- Sets the color of the header bar and address bar in Android mobile browsers -->
+
+    <!-- Use fonts from Google Fonts - https://fonts.google.com/ -->
+    <!-- Roboto for all body and element text, Orbitron for titles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My external style sheets -->
+    <link rel="stylesheet" href="css/theme-dark.css" />
+    <link rel="stylesheet" href="css/theme-light.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page container grid -->
+    <div class="blog-container">
+      <!-- Header -->
+      <div class="header-container box1">
+        <!-- Header top -->
+        <div class="header-top box2">
+          <!-- Top application bar -->
+          <div class="app-bar box3">
+            <!-- About icon -->
+            <a href="about.html">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/about.svg"
+                  title="About the author"
+                  alt="About the author"
+                />
+              </div>
+            </a>
+
+            <!-- Dark mode icon -->
+            <a href="javascript:void(0);">
+              <!-- Link to nothing -->
+              <div id="dark-mode" class="app-bar-icon box4">
+                <img
+                  id="dark-mode-icon"
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/dark-mode.svg"
+                  title="Dark / light mode"
+                  alt="Dark / light mode"
+                />
+              </div>
+            </a>
+
+            <script>
+              // The only bit of JavaScript I used - really wanted the dark/light theme button to work
+              document.getElementById("dark-mode").onclick = function () {
+                document.styleSheets[2].disabled =
+                  !document.styleSheets[2].disabled; // Disable or enabled the light theme stylesheet (depending on if it's already enabled or not)
+
+                // Change the dark/light mode icon accordingly
+                if (
+                  document
+                    .getElementById("dark-mode-icon")
+                    .src.includes("dark-mode.svg")
+                ) {
+                  document.getElementById("dark-mode-icon").src =
+                    "images/icons/light-mode.svg";
+                } else {
+                  document.getElementById("dark-mode-icon").src =
+                    "images/icons/dark-mode.svg";
+                }
+              };
+            </script>
+
+            <!-- Search icon -->
+            <a href="#">
+              <div class="app-bar-icon box4">
+                <img
+                  class="app-bar-icon-theme icon24px"
+                  src="images/icons/search.svg"
+                  title="Search"
+                  alt="Search"
+                />
+              </div>
+            </a>
+
+            <!-- Dummy search box -->
+            <div id="app-bar-searchbox" class="box4">
+              <span id="app-bar-searchboxtext">Search</span>
+            </div>
+          </div>
+        </div>
+        <!-- Header bottom -->
+        <div class="header-bottom box2">
+          <a id="header-title" class="box3" href="index.html"
+            >Metaverse Musings</a
+          >
+          <a id="header-subtitle" class="box3" href="index.html"
+            ><em>a blog about all things Metaverse</em></a
+          >
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="blog-content-container box1">
+        <div class="blog-content-wrapper box2">
+          <article>
+            <!-- Main title -->
+            <br />
+            <h1 class="box3">Design system</h1>
+            <br />
+
+            <!-- Author grid -->
+            <div class="author-grid box3">
+              <img
+                class="author-image-small box4"
+                src="images/author.png"
+                title="Pieter Smith"
+                alt="Author"
+              />
+              <h3 class="author-name box4">Author: Pieter Smith</h3>
+              <h4 class="published-date box4">Thursday, 12 May 2022</h4>
+            </div>
+
+            <!-- General design -->
+            <section id="general-design">
+              <br />
+              <br />
+              <h2>General design</h2>
+              <p>
+                This is my first project in the Udacity front-end web developer
+                course. This project is all about HTML (HyperText Markup
+                Language) and CSS (Cascading Style Sheets). We were tasked with
+                creating a personal blog website, and I have chosen the topic of
+                "the Metaverse" for my blog.
+              </p>
+              <p>
+                From a design point of view, I based my blog website's design
+                loosely on Google's
+                <a
+                  class="blog-link"
+                  href="https://m3.material.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Material Design 3</a
+                >
+                design system. Both the
+                <a
+                  class="blog-link"
+                  href="https://m3.material.io/components/top-app-bar/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >top app bar</a
+                >
+                and the
+                <a
+                  class="blog-link"
+                  href="https://m3.material.io/components/navigation-drawer/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >navigation drawer</a
+                >
+                are based on Google's designs for these components.
+              </p>
+              <p>
+                From a development point of view, the entire website was
+                developed using the
+                <a
+                  class="blog-link"
+                  href="https://code.visualstudio.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visual Studio Code</a
+                >
+                code editor. The website's responsive design was tested using
+                Google Chrome DevTools'
+                <a
+                  class="blog-link"
+                  href="https://developer.chrome.com/docs/devtools/device-mode/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Device Mode</a
+                >. This should help to ensure that the site displays correctly
+                on various devices of different sizes, including mobile phones,
+                tablets, and computer monitors. Finally, I tried to adhere to
+                the
+                <a
+                  class="blog-link"
+                  href="https://udacity.github.io/frontend-nanodegree-styleguide/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Udacity Frontend Nanodegree Style Guide</a
+                >
+                when writing my HTML and CSS code.
+              </p>
+            </section>
+
+            <!-- Navigation -->
+            <section id="site-navigation">
+              <br />
+              <h2>Navigation</h2>
+              Only the following links and features work on this website:
+              <ul>
+                <li>
+                  <strong>The website title (i.e. "Metaverse Musings")</strong>
+                  - clicking this will always return you to the home page.
+                </li>
+                <li>
+                  <strong>The "About" icon in the top app bar</strong> -
+                  clicking this will take you to the "About the author" page
+                  containing my bio.
+                </li>
+                <li>
+                  <strong>The "Dark mode" icon in the top app bar</strong> -
+                  switches between light and dark mode (more on this below).
+                </li>
+                <li>
+                  <strong
+                    >The first blog post card on the home page (named "What is
+                    the Metaverse?")</strong
+                  >
+                  - takes you to an example blog post.
+                </li>
+                <li>
+                  <strong
+                    >The "Design system" link on the navigation menu on the home
+                    page</strong
+                  >
+                  - takes you to this page.
+                </li>
+                <li>
+                  <strong>All links on this page</strong> - take you to the
+                  websites of the various design components that were used to
+                  create this website.
+                </li>
+              </ul>
+              <strong
+                >All other links and features are dummy items and are for
+                demonstration purposes only.</strong
+              >
+              Clicking them won't do anything apart from taking you to the top
+              of the current page.
+            </section>
+
+            <!-- Color palette and cards -->
+            <section id="color-palette-and-cards">
+              <br />
+              <br />
+              <h2>Color palette and cards</h2>
+              <p>
+                For my color palette, I again turned to Google's Material Design
+                3. I used their
+                <a
+                  class="blog-link"
+                  href="https://material-foundation.github.io/material-theme-builder/#/dynamic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Dynamic Material Theme Builder</a
+                >
+                along with a background image from Shutterstock (the cool
+                virtual reality girl at the top of this page) to obtain a
+                primary palette color. This primary color was #454dd2. A nice
+                "blue-purplish" color (the color of all the links on this page).
+              </p>
+              <p>
+                I then used my #454dd2 primary color on Google's
+                <a
+                  class="blog-link"
+                  href="https://material-foundation.github.io/material-theme-builder/#/custom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Custom Material Theme Builder</a
+                >, which provided me with an entire color palette to use for my
+                blog website. There is an "EXPORT" button in the top right-hand
+                corner of the Material Theme Builder, which allows you to export
+                your color palette to a CSS file. And that is where I obtained
+                the colors I used for the light and dark themes for my website
+                (see the theme-light.css and theme-dark.css files for all colors
+                generated by Google's Material Theme Builder). I also used the
+                example <em>Plant Care</em> app in the Material Theme Builder
+                for inspiration for the blog post cards on my home page.
+              </p>
+              <p>
+                Below are screenshots of my light and dark themes from Google's
+                Material Theme Builder, as well as a screenshot of the example
+                <em>Plant Care</em> app:
+              </p>
+              <figure>
+                <img
+                  class="blog-image-nofilter box3"
+                  src="images/design-system-light-theme.png"
+                  title="Light theme"
+                  alt="Light theme"
+                />
+                <figcaption class="blog-caption">
+                  <u
+                    ><em
+                      >Light theme from Google's Material Theme Builder</em
+                    ></u
+                  >
+                </figcaption>
+              </figure>
+              <br />
+              <figure>
+                <img
+                  class="blog-image-nofilter box3"
+                  src="images/design-system-dark-theme.png"
+                  title="Dark theme"
+                  alt="Dark theme"
+                />
+                <figcaption class="blog-caption">
+                  <u
+                    ><em>Dark theme from Google's Material Theme Builder</em></u
+                  >
+                </figcaption>
+              </figure>
+              <br />
+              <figure>
+                <img
+                  class="blog-image-nofilter box3"
+                  src="images/design-system-example-app.png"
+                  title="Example app"
+                  alt="Example app"
+                />
+                <figcaption class="blog-caption">
+                  <u
+                    ><em
+                      >Example app from Google's Material Theme Builder</em
+                    ></u
+                  >
+                </figcaption>
+              </figure>
+              <br />
+            </section>
+
+            <!-- Light and dark mode -->
+            <section id="light-and-dark-mode">
+              <br />
+              <h2>Light and dark mode</h2>
+              <p>
+                Using the light and dark themes above, I was able to add a
+                button to the top app bar of all my pages to dynamically swap
+                between light and dark mode. I'm particularly proud of this
+                feature. I will aim to improve on this feature once I've learned
+                JavaScript and how to use cookies. That way, I will be able to
+                persist the user's light/dark mode choice across the various
+                pages of my website.
+              </p>
+              <p>
+                Give this feature a bash by scrolling to the top of this page.
+                Then click the <em>moon</em> icon in the top right-hand corner
+                of the page to switch to <em>dark mode</em>. You can then click
+                the <em>sun</em> icon to switch back to <em>light mode</em>.
+              </p>
+            </section>
+
+            <!-- Typography -->
+            <section id="typography">
+              <br />
+              <h2>Typography</h2>
+              <p>
+                I used
+                <a
+                  class="blog-link"
+                  href="https://fonts.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google Fonts</a
+                >
+                for all my font needs.
+                <a
+                  class="blog-link"
+                  href="https://fonts.google.com/specimen/Roboto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Roboto</a
+                >
+                was used for all HTML body and element text, while
+                <a
+                  class="blog-link"
+                  href="https://fonts.google.com/specimen/Orbitron"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Orbitron</a
+                >
+                was used for all titles.
+              </p>
+            </section>
+
+            <!-- Icons and images -->
+            <section id="icons-and-images">
+              <br />
+              <h2>Icons and images</h2>
+              <p>
+                I then used Google Fonts'
+                <a
+                  class="blog-link"
+                  href="https://fonts.google.com/icons"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Icons</a
+                >
+                for all my icon needs. I could have used Google's icon font
+                directly by linking to their CSS style sheet in the &lt;head&gt;
+                section of my HTML pages (similar to what I did to link to the
+                Roboto and Orbitron Google fonts). However, using their icon
+                font directly would limit me to only using Google's icons in the
+                future. So, I rather downloaded the icons I needed and coloured
+                them using the CSS <em>filter</em> property.
+              </p>
+
+              More details on how these icons (and most other images on this
+              site) were filled with custom colors can be found at the following
+              links:
+              <ul>
+                <li>
+                  <a
+                    class="blog-link"
+                    href="https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Stackoverflow Question 22252472 - How to change the color
+                    of a svg element using CSS</a
+                  >
+                  (see the top "To change any SVGs color" answer by Manish
+                  Menaria).
+                </li>
+                <li>
+                  <a
+                    class="blog-link"
+                    href="https://codepen.io/sosuke/pen/Pjoqqp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Codepen CSS filter generator</a
+                  >
+                  (use the "Target color" field to create a CSS filter using a
+                  hex color value).
+                </li>
+              </ul>
+            </section>
+
+            <!-- Browser compatibility -->
+            <section id="browser-compatibility">
+              <br />
+              <h2>Browser compatibility</h2>
+
+              This website was tested and should work fine with the following
+              web browsers:
+              <ul>
+                <li>Chrome</li>
+                <li>Brave Browser</li>
+                <li>Firefox</li>
+                <li>Safari</li>
+                <li>Microsoft Edge</li>
+                <li>Chrome Android</li>
+                <li>Brave Browser Android</li>
+              </ul>
+              <strong
+                >Internet Explorer is <u>not</u> supported since it is a legacy
+                browser and is not compatible with many new CSS rules.</strong
+              >
+            </section>
+
+            <!-- Final thoughts -->
+            <section id="final-thoughts">
+              <br />
+              <br />
+              <h2>Final thoughts</h2>
+              <p>
+                I thoroughly enjoyed my first project in the Udacity front-end
+                web developer course. There was a lot of "feature creep" in my
+                designs, and I will need to keep things simple in the coming
+                projects to not overrun on time. But despite taking a long time
+                to develop my blog website and all its features, I have truly
+                learned a lot in doing so.
+              </p>
+              <p>
+                I feel a bit like Neo in The Matrix. But instead of knowing
+                "Kung Fu"...
+              </p>
+              <img
+                class="blog-image-small box3"
+                src="images/i-know-css.jpg"
+                title="I know CSS!"
+                alt="I know CSS!"
+              />
+            </section>
+          </article>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-container box1">
+        <div id="footer-text" class="box2">Copyright © 2022 - Pieter Smith</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+/*
+  Using the CSS variables (part of CSS custom properties) as documented here:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+
+  Theme colors obtained from Google's Meterial Design 3 Theme Builder here:
+  https://material-foundation.github.io/material-theme-builder/#/custom
+
+  Basic implementation of CSS variables:
+    In CSS, you can declare your variables in the root block:
+    :root {
+    --main-bg-color: #1596A7;
+    }
+
+    And implement it using with the var() method:
+    .panel-header {
+        background: var(--main-bg-color);
+        color: ...
+    }
+*/
+
+:root {
+  --primary: #bdc2ff;
+  --on-primary: #0709a6;
+  --primary-container: #2a31ba;
+  --on-primary-container: #dfe0ff;
+  --secondary: #c5c4dd;
+  --on-secondary: #2e2f42;
+  --secondary-container: #444559;
+  --on-secondary-container: #e1e0fa;
+  --tertiary: #e8b9d5;
+  --on-tertiary: #45263b;
+  --tertiary-container: #5e3c52;
+  --on-tertiary-container: #ffd7ef;
+  --error: #ffb4a9;
+  --on-error: #680003;
+  --error-container: #930006;
+  --on-error-container: #ffdad4;
+  --outline: #91909a;
+  --background: #1b1b1f;
+  --on-background: #e4e1e6;
+  --surface: #1b1b1f;
+  --on-surface: #e4e1e6;
+  --surface-variant: #46464f;
+  --on-surface-variant: #c7c5d0;
+  --inverse-surface: #e4e1e6;
+  --inverse-on-surface: #1b1b1f;
+
+  /* My additions below */
+  --title-text: #ffd7ef;
+  --title-text-shadow: #1b1b1f;
+
+  /*
+    CSS filters below are used to dynamically change the svg image color.
+    see: https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element
+    and: "Target color" field at: https://codepen.io/sosuke/pen/Pjoqqp
+  */
+  --header-icon-filter: invert(78%) sepia(21%) saturate(288%) hue-rotate(281deg)
+    brightness(108%) contrast(103%); /* Target color: --on-tertiary-container */
+  --header-icon-filter-hover: invert(40%) sepia(21%) saturate(288%)
+    hue-rotate(281deg) brightness(108%) contrast(103%); /* Target color: --primary-container with a 40% invert value */
+  --nav-icon-filter: invert(78%) sepia(21%) saturate(288%) hue-rotate(281deg)
+    brightness(108%) contrast(103%); /* Target color: --on-tertiary-container */
+  --nav-icon-filter-hover: invert(23%) sepia(8%) saturate(2334%)
+    hue-rotate(268deg) brightness(99%) contrast(85%); /* Target color: --tertiary-container */
+  --content-image-filter: grayscale(100%) invert(0%) sepia(100%) saturate(1000%)
+    hue-rotate(210deg) brightness(100%) contrast(100%); /* Target color: custom */
+  --content-image-filter-hover: grayscale(100%) invert(0%) sepia(100%)
+    saturate(500%) hue-rotate(198deg) brightness(120%) contrast(100%); /* Target color: custom */
+}
