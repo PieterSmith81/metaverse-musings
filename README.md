@@ -2,7 +2,7 @@
 
 A responsive blog website about the Metaverse, drawing inspiration from Google's Material Design 3.
 
-## Live Website
+## Live Demo Website
 
 ### https://pietersmith81.github.io/metaverse-musings
 
